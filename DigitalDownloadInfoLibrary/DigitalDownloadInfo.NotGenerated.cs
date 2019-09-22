@@ -1,56 +1,58 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-// xsd.exe /c /l:cs /f DigitalDownloadInfo.xsd /n:DoenaSoft.DVDProfiler.DigitalDownloadInfo
+// xsd.exe /c /l:cs /f /n:DoenaSoft.DVDProfiler.DigitalDownloadInfo DigitalDownloadInfo.xsd
 
 namespace DoenaSoft.DVDProfiler.DigitalDownloadInfo
 {
     public sealed partial class DigitalDownloadInfoList
     {
-        private static XmlSerializer s_XmlSerializer;
+        private static XmlSerializer _xmlSerializer;
 
         [XmlIgnore]
         public static XmlSerializer XmlSerializer
         {
             get
             {
-                if (s_XmlSerializer == null)
+                if (_xmlSerializer == null)
                 {
-                    s_XmlSerializer = new XmlSerializer(typeof(DigitalDownloadInfoList));
+                    _xmlSerializer = new XmlSerializer(typeof(DigitalDownloadInfoList));
                 }
 
-                return (s_XmlSerializer);
+                return _xmlSerializer;
             }
         }
 
-        public static DigitalDownloadInfoList Deserialize(String fileName)
+        public static DigitalDownloadInfoList Deserialize(string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                DigitalDownloadInfoList instance = (DigitalDownloadInfoList)(XmlSerializer.Deserialize(fs));
+                var instance = (DigitalDownloadInfoList)(XmlSerializer.Deserialize(fs));
 
-                return (instance);
+                return instance;
             }
         }
 
-        public static void Serialize(DigitalDownloadInfoList instance
-            , String fileName)
+        public static void Serialize(DigitalDownloadInfoList instance, string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
             {
-                using (XmlTextWriter xtw = new XmlTextWriter(fs, Encoding.UTF8))
+                using (var xtw = new XmlTextWriter(fs, Encoding.UTF8))
                 {
                     xtw.Formatting = Formatting.Indented;
+                    xtw.Namespaces = false;
 
-                    XmlSerializer.Serialize(xtw, instance);
+                    var ns = new XmlSerializerNamespaces();
+                    ns.Add(string.Empty, string.Empty);
+
+                    XmlSerializer.Serialize(xtw, instance, ns);
                 }
             }
         }
 
-        public void Serialize(String fileName)
+        public void Serialize(string fileName)
         {
             Serialize(this, fileName);
         }
@@ -58,47 +60,50 @@ namespace DoenaSoft.DVDProfiler.DigitalDownloadInfo
 
     public sealed partial class DigitalDownloadInfo
     {
-        private static XmlSerializer s_XmlSerializer;
+        private static XmlSerializer _xmlSerializer;
 
         [XmlIgnore]
         public static XmlSerializer XmlSerializer
         {
             get
             {
-                if (s_XmlSerializer == null)
+                if (_xmlSerializer == null)
                 {
-                    s_XmlSerializer = new XmlSerializer(typeof(DigitalDownloadInfo));
+                    _xmlSerializer = new XmlSerializer(typeof(DigitalDownloadInfo));
                 }
 
-                return (s_XmlSerializer);
+                return _xmlSerializer;
             }
         }
 
-        public static DigitalDownloadInfo Deserialize(String fileName)
+        public static DigitalDownloadInfo Deserialize(string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                DigitalDownloadInfo instance = (DigitalDownloadInfo)(XmlSerializer.Deserialize(fs));
+                var instance = (DigitalDownloadInfo)(XmlSerializer.Deserialize(fs));
 
-                return (instance);
+                return instance;
             }
         }
 
-        public static void Serialize(DigitalDownloadInfo instance
-            , String fileName)
+        public static void Serialize(DigitalDownloadInfo instance, string fileName)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
             {
-                using (XmlTextWriter xtw = new XmlTextWriter(fs, Encoding.UTF8))
+                using (var xtw = new XmlTextWriter(fs, Encoding.UTF8))
                 {
                     xtw.Formatting = Formatting.Indented;
+                    xtw.Namespaces = false;
 
-                    XmlSerializer.Serialize(xtw, instance);
+                    var ns = new XmlSerializerNamespaces();
+                    ns.Add(string.Empty, string.Empty);
+
+                    XmlSerializer.Serialize(xtw, instance, ns);
                 }
             }
         }
 
-        public void Serialize(String fileName)
+        public void Serialize(string fileName)
         {
             Serialize(this, fileName);
         }

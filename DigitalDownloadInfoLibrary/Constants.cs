@@ -1,19 +1,17 @@
-﻿using System;
-
-namespace DoenaSoft.DVDProfiler.DigitalDownloadInfo
+﻿namespace DoenaSoft.DVDProfiler.DigitalDownloadInfo
 {
     public static class Constants
     {
-        public const String Company = "Company";
+        public const string Company = "Company";
 
-        public const String Code = "Code";
+        public const string Code = "Code";
 
-        public const String FieldDomain = "DigitalDownloadInfo";
+        public const string FieldDomain = "DigitalDownloadInfo";
 
-        public const String ReadKey = "DigitalDownloadInfo";
+        public const string ReadKey = "DigitalDownloadInfo";
 
-        public const String LabelSuffix = "Label";
+        public const string LabelSuffix = "Label";
 
-        public const String HtmlPrefix = "DDI";
+        public const string HtmlPrefix = "DDI";
     }
 }
