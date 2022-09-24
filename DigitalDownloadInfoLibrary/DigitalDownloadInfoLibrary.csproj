@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DigitalDownloadInfo.Interface.nuspec" />
-    <None Include="DigitalDownloadInfo.Interface.props" />
+    <None Include="DoenaSoft.DigitalDownloadInfo.Interface.props" />
     <None Include="DigitalDownloadInfoLibrary.snk" />
   </ItemGroup>
   <ItemGroup>

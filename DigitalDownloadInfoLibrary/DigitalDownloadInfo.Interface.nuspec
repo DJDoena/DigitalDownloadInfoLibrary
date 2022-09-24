@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>DoenaSoft.DigitalDownloadInfo.Interface</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>DoenaSoft.DigitalDownloadInfo.Interface</title>
     <authors>DJ Doena</authors>
     <icon>images\djdsoft.png</icon>
@@ -22,7 +22,7 @@
     <file src="bin\x86\Release\DoenaSoft.DigitalDownloadInfo.Interface.xml" target="build\x86\DoenaSoft.DigitalDownloadInfo.Interface.xml" />
     <file src="bin\x86\Release\DigitalDownloadInfo.xsd" target="build\x86\DigitalDownloadInfo.xsd" />
 
-    <file src="DigitalDownloadInfo.Interface.props" target="build\net452" />
+    <file src="DoenaSoft.DigitalDownloadInfo.Interface.props" target="build\net452" />
 
     <file src="djdsoft.png" target="images\" />
 </files>
