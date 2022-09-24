@@ -22,7 +22,7 @@
     <file src="bin\x86\Release\DoenaSoft.DigitalDownloadInfo.Interface.xml" target="build\x86\DoenaSoft.DigitalDownloadInfo.Interface.xml" />
     <file src="bin\x86\Release\DigitalDownloadInfo.xsd" target="build\x86\DigitalDownloadInfo.xsd" />
 
-    <file src="DoenaSoft.DigitalDownloadInfo.Interface.props" target="build\net452" />
+    <file src="DigitalDownloadInfo.Interface.props" target="build\net452" />
 
     <file src="djdsoft.png" target="images\" />
 </files>
