@@ -9,9 +9,9 @@ on:
       
 env:
   SOURCE_URL: https://api.nuget.org/v3/index.json
-  SOLUTION_FILE: DigitalDownloadInfo.Interface.sln
-  PROJECT_FILE: DigitalDownloadInfo.Interface.csproj
-  PROJECT_FOLDER: DigitalDownloadInfo.Interface
+  SOLUTION_FILE: DigitalDownloadInfoLibrary.sln
+  PROJECT_FILE: DigitalDownloadInfoLibrary.csproj
+  PROJECT_FOLDER: DigitalDownloadInfoLibrary
   NUGET_SPEC: DigitalDownloadInfo.Interface.nuspec
   BUILD_CONFIGURATION: Release
   BUILD_PLATFORMX64: x64
